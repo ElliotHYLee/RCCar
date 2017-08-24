@@ -22,11 +22,18 @@ PUB main
   startSensor
   cognew(runDebug, @debuggerStack)
 
+
+  
+
 PUB runDebug
 
   debug.quickStartDebug
   repeat
-    debug.decLn(db, long(eulerPtr))
+    debug.clear(db)
+    debug.decLn(db,long[eulerPtr][0])
+    debug.decLn(db,long[eulerPtr][1])
+    debug.decLn(db,long[eulerPtr][2])
+    waitcnt(cnt + clkfreq/10)
   
 
 
